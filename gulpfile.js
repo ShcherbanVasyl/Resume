@@ -32,7 +32,7 @@ gulp.task('cssmin', function(){
 
 // Sass Compile
 gulp.task('sass', function(){
-  gulp.src('src/scss/*.scss')
+  gulp.src(['src/scss/*.scss', 'src/scss/_components/*.scss'])
       .pipe(sass().on('error', sass.logError))
       .pipe(autoprefixer({
         browsers: ['last 2 versions'],
